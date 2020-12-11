@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="s1" duration-ms="50120" started-at="2020-12-11T14:20:16 CST" finished-at="2020-12-11T14:21:06 CST">
+    <groups>
+    </groups>
+    <test name="test2" duration-ms="50120" started-at="2020-12-11T14:20:16 CST" finished-at="2020-12-11T14:21:06 CST">
+      <class name="com.webtest.zchdemo.zchExcelDataTest">
+        <test-method status="PASS" signature="doBeforeClass()[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="doBeforeClass" is-config="true" duration-ms="5236" started-at="2020-12-11T14:20:16 CST" finished-at="2020-12-11T14:20:22 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeClass -->
+        <test-method status="PASS" signature="testLoginSuccess()[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="testLoginSuccess" is-config="true" duration-ms="11399" started-at="2020-12-11T14:20:22 CST" finished-at="2020-12-11T14:20:33 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method status="PASS" signature="test01(java.lang.String)[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="test01" duration-ms="11766" started-at="2020-12-11T14:20:33 CST" data-provider="zch" finished-at="2020-12-11T14:20:45 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[农夫山泉]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method status="PASS" signature="testLoginSuccess()[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="testLoginSuccess" is-config="true" duration-ms="8896" started-at="2020-12-11T14:20:45 CST" finished-at="2020-12-11T14:20:54 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method status="PASS" signature="test01(java.lang.String)[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="test01" duration-ms="11719" started-at="2020-12-11T14:20:54 CST" data-provider="zch" finished-at="2020-12-11T14:21:06 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[82年拉菲]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method status="PASS" signature="doAfterMethod()[pri:0, instance:com.webtest.zchdemo.zchExcelDataTest@6c49835d]" name="doAfterMethod" is-config="true" duration-ms="717" started-at="2020-12-11T14:21:06 CST" finished-at="2020-12-11T14:21:06 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.webtest.zchdemo.zchExcelDataTest -->
+    </test> <!-- test2 -->
+  </suite> <!-- s1 -->
+</testng-results>
