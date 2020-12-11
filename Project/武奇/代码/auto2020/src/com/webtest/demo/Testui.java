@@ -7,7 +7,7 @@ import com.webtest.core.BaseTest;
 
 /**
  * author:武奇
- *
+ *订单部分+资金管理
  */
 public class Testui extends BaseTest{
 	//登录是测试前提

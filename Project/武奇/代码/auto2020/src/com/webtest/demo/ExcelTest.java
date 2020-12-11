@@ -7,7 +7,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.dataprovider.NSDataProvider;
 /**
  * author:武奇
- *
+ *订单部分+资金管理
  */
 public class ExcelTest extends BaseTest {
 	//登录是测试前提

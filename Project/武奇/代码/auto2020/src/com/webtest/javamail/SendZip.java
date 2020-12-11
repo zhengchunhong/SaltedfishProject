@@ -32,7 +32,7 @@ import com.sun.mail.util.MailSSLSocketFactory;
  *
  * @author 武奇
  * @version 2020
- * 
+ * testng-xslt
  */
 
 public class SendZip extends TestListenerAdapter{
