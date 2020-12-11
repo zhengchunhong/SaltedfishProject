@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\zancun\auto2020\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3383277936.index
+1274702285.index
+184373021.index
+4231340972.index
+3751071001.index
