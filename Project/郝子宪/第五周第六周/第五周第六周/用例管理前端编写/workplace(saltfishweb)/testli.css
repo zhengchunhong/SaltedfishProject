@@ -1,0 +1,264 @@
+/*
+* @Author: lenovo
+* @Date:   2020-12-09 14:27:16
+* @Last Modified by:   18703
+* @Last Modified time: 2020-12-10 09:42:52
+*/
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: 	#787878 ;
+}
+.header {/*最顶部的框*/
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #4F4F4F;
+    position: fixed;
+    background: #FFFFFF;
+
+}
+.identification{/*标识*/
+	float: left;
+	font-size: 25px;
+	padding-left: 80px;
+	padding-top: 10px ;
+	padding-bottom: 10px;
+}
+
+
+.loginRegister {/*登录注册*/
+    float: right;
+}
+.loginRegister li {/*登录注册链接*/
+    padding-top: 30px;
+    float: left;
+    font-size: 12px;
+    margin-right:75px;
+    font-weight: bolder;
+    font-family: 黑体;
+}
+
+.image{/*头像*/
+    height: 50px;
+    margin-top: 4px;
+    margin-right: 7px;
+    display: inline-block;
+    float: left;
+}
+.image img{/*头像图片*/
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}
+.userName{/*用户名*/
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right:30px ;
+    margin-top: 20px;
+    
+}
+.outline{/*退出登录*/
+    width: 70px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 20px;
+    float: left;
+}
+.mainPage{/*主页面*/
+	width: 100%;
+	height: 100%;
+    background-color: #FFF;
+	display: inline-block;
+}
+
+.leftMain{/*左边框*/
+    background-color: #2B333E;
+    width: 15%;
+    top: 60px;
+    height: 100%;
+    padding-top: 50px;
+    font-size: 18px;
+    font-family: 隶书;
+    display: inline-block;
+    float:left;
+     position: fixed;
+}
+
+.leftMain li {
+    float: left;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    vertical-align:middle;
+
+}
+
+
+ .leftMain  li:hover{
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+ }
+.homepageOn {
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+.projectManagementOn {
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+.interfaceManagementOn {
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+.qUsecaseManagementOn {
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+.testOn {
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+.aboutUsOn{
+    color: #ccc;
+    background:#252C35;
+    border-radius: 3px;
+}
+
+.main{/*主要内容*/
+    width: 70%;
+    height: 110%;
+    float:left; 
+    display: inline-block;
+    line-height: 25px;
+    margin: 5% 5% 5% 18%;
+
+    padding: 25px;
+    background: #FFFFFF;
+}
+.topmedthod{
+    /* width: 80%; */
+    height: 100%;
+    padding: 5% 5% 5% 5%;
+    border:2px solid #2B333E ;
+    border-radius: 3px;
+    display: inline-block;
+    background-color: ##2B333E;
+}
+.urlimg{
+    width: 50px;
+    height: 46px;
+    border-radius: 3px;
+    display: inline-block;
+    float: left;
+    border:2px solid #2B333E ;
+}
+.formaction{
+    display: inline-block;
+    float: left;
+    width: 122px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 3px;
+}
+.inputurl{
+    display: inline-block;
+    float: left;
+    width: 60%;
+    height: 47px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.submiturl{
+    display: inline-block;
+    float: left;
+    width: 10%;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 2px;
+}
+.requesth1{
+     display: inline-block;
+     float:left; 
+     width: 80%;
+     height: 50px;
+     font-size: 30px;
+     margin: 2% 0 1% 0;
+}
+.request{
+    display: inline-block;
+     float:left; 
+     width: 80%;
+     height: 50px;
+     font-size: 15px;
+     margin: 0 0 2% 5%;
+}
+.nav_li{
+    display: inline-block;
+     float:left; 
+     /* padding: 0 4% 1% 4%; */
+     width: 20%;
+     /* padding-left: 20px; */
+     line-height: 100px;
+     text-align:center;
+     background-color: #8E8CD8;
+     border-radius: 5px;
+     margin-bottom: 10px;
+     font-size: 23px;
+
+}
+.input_li{
+    display: inline-block;
+     float:left; 
+     /* position: fixed; */
+     height: 98px;
+     width: 75%;
+     background-color: #EBEDEF;
+     border-radius: 5px;
+     margin-bottom: 10px;
+     font-size: 20px;
+}
+.nav_li_header{
+    display: inline-block;
+     float:left; 
+     width: 20%;
+     line-height: 53px;
+     text-align:center;
+     background-color: #8E8CD8;
+     border-radius: 5px;
+     margin-bottom: 10px;
+     font-size: 23px;
+}
+.he_form{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 50px;
+}
+
+.Response{
+     display: inline-block;
+     float:left; 
+     width: 80%;
+     height: 50px;
+     font-size: 30px;
+     margin: 16% 0 1% 0;
+}
+
+
