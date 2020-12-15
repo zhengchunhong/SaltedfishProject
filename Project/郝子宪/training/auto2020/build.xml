@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="auto2020">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../Twofirst/JavaSE/eclipse/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/org.testng_7.3.0.r202008060316.jar"/>
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/com.beust.jcommander_1.78.0.jar"/>
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="C:/Users/HP/.p2/pool/plugins/org.yaml.snakeyaml_1.21.0.jar"/>
+    </path>
+    <path id="auto2020.classpath">
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="bin"/>
+        <pathelement location="libs/commons-collections4-4.4.jar"/>
+        <pathelement location="libs/commons-compress-1.19.jar"/>
+        <pathelement location="libs/log4j-api-2.11.2.jar"/>
+        <pathelement location="libs/log4j-core-2.11.2.jar"/>
+        <pathelement location="libs/mysql-connector-java-5.1.39-bin.jar"/>
+        <pathelement location="libs/poi-4.1.2.jar"/>
+        <pathelement location="libs/poi-ooxml-4.1.2.jar"/>
+        <pathelement location="libs/poi-ooxml-schemas-4.1.2.jar"/>
+        <pathelement location="libs/selenium-server-standalone-3.141.59.jar"/>
+        <pathelement location="libs/xmlbeans-3.1.0.jar"/>
+        <pathelement location="libs/freemarker-2.3.30.jar"/>
+        <pathelement location="libs/javax.mail-1.6.2.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="auto2020.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
