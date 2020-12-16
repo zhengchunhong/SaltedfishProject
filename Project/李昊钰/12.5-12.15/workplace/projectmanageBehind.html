@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>项目管理</title>
+        <link rel="stylesheet" href="styleProjectManageBack.css" />
+    </head>
+    <body>
+    	<div class="header"><!--最顶部的框-->
+    		<div class="identification"><!--标识-->
+    			<p>SaltedFishTest管理系统</p>
+    		</div>
+    		<div class="loginRegister"><!--登录注册-->
+    			<div class="image"><img  src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1114958240,2690923029&fm=26&gp=0.jpg"/></div>
+				<div class="userName"><text>用户名</text></div>
+				<div class="outline"><button ><a href="homepage.html">退出登录</a></button></div>
+				
+    		</div>
+    	</div>
+    	<div class="mainPage"><!--主页面-->
+    		<div class="leftMain"><!--左边框-->
+    			<div class="tab">
+	    			<ul>
+	    				<li class="HomePageBehind"><a href="HomePageBehind.html">主页</a></li>
+	    				<li class="projectManagementBehindOn"><a href="projectmanageBehind.html">项目管理</a></li>
+	    				<li class="interfaceManagementBehind"><a href="InterfaceManagementBehind.html">接口管理</a></li>
+	    				<li class="qUsecaseManagementBehind"><a href="UseCaseManagementBehind.html">用例管理</a></li>
+	    				<li class="testBehind"><a href="testBehind.html">PostSalted</a></li>
+	    			</ul>
+	    		</div>
+    		</div>
+    		<div class="main"><!--主要内容-->
+    			<!-- <div class="base_information"><!--项目基本信息
+	    			<li class="project_base">项目基本信息</li>
+	    			<li class="project_name">项目名称<input class="pro_name"></li>
+	    			<li class="project_describe">项目描述<input class="pro_describe"></li>
+	    			<li class="project_save"><button class="pro_save">保存</button></li>
+	    		</div> -->
+	    		<div>
+	    			<div>
+	                    <form onsubmit="return submitTable()">
+	                        用户账号：<input type="text" id="number"><br>
+	                        用户姓名：<input type="text" id="name"><br>
+	                        用户手机：<input type="text" id="phone"><br>
+	                        用户职位：<input type="text" id="clerk"><br>
+	                        用户角色：<input type="text" id="role"><br>
+	                    </form>
+                	</div>
+	    			<li class="member_management">项目组成员管理 <button class="member_save" onclick="return submitTable()">新增成员</button>
+	    			</li>
+
+	    			<table id="b" border="1" cellspacing="0" cellpadding="0" class="member_table">
+	    				<!-- <caption>项目组成员管理</caption> -->
+	    				<tr class="table">
+	    					<th class="tableth1">用户账号</th>
+	    					<th class="tableth2">用户姓名</th>
+	    					<th class="tableth3">用户手机</th>
+	    					<th class="tableth4">用户职位</th>
+	    					<th class="tableth5">用户角色</th>
+	    					<th class="tableth6">更新时间</th>
+	    					<th class="tableth7">操作</th>
+	    				</tr>
+                        <tr class="table">
+                            <th class="tableth1">001</th>
+                            <th class="tableth2">ahhh</th>
+                            <th class="tableth3">188***6825</th>
+                            <th class="tableth4">负责人</th>
+                            <th class="tableth5">测试</th>
+                            <th class="tableth6">2020.11.25</th>
+                            <th class="tableth7"><a href="编辑页面">编辑 |</a><a href="删除"> 删除</a></th>
+                        </tr>
+	    			</table>
+	    		</div>
+    		</div>	    		
+	    </div>  
+	    <script type="text/javascript">
+	    	function createFormDate(form) {
+                var date1 = new Date();
+                var year = date1.getFullYear();
+                var month = date1.getMonth() + 1;
+                var day = date1.getDate();
+                return year+"/"+month+"/"+day;
+            }
+        function submitTable(){
+            var number = document.getElementById("number").value;
+            var name=document.getElementById("name").value;
+            var phone=document.getElementById("phone").value;
+            var clerk=document.getElementById("clerk").value;
+            var role=document.getElementById("role").value;
+            var time=createFormDate("YYYY/MM/DD");
+            var action="编辑 | 删除";
+            row = document.getElementById("b").insertRow();
+            if(row!=null){
+                cell=row.insertCell();
+                cell.innerHTML=number;
+                cell = row.insertCell();
+                cell.innerHTML=name;
+                cell = row.insertCell();
+                cell.innerHTML=phone;
+                cell = row.insertCell();
+                cell.innerHTML=clerk;
+                cell = row.insertCell();
+                cell.innerHTML=role;
+                cell = row.insertCell();
+                cell.innerHTML=time;
+                cell = row.insertCell();
+                cell.innerHTML=action;
+            }
+            return false;
+        }
+    </script>  		
+    </body>
+</html>

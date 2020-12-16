@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PostSalted</title>
+        <link rel="stylesheet" href="testli.css" />
+    </head>
+    <body>
+    	<div class="header"><!--最顶部的框-->
+    		<div class="identification"><!--标识-->
+    			<p>SaltedFishTest</p>
+    		</div>
+    		<div class="loginRegister"><!--登录注册-->
+    			<div class="image"><img  src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1114958240,2690923029&fm=26&gp=0.jpg"/></div>
+				<div class="userName"><text>用户名</text></div>
+				<div class="outline"><button ><a href="homepage.html">退出登录</a></button></div>
+				
+    		</div>
+    	</div>
+    	<div class="mainPage"><!--主页面-->
+    		<div class="leftMain"><!--左边框-->
+    			<div class="tab">
+	    			<ul>
+	    				<li class="homepage"><a href="homepages.html">主页</a></li>
+	    				<li class="projectManagement"><a href="projectmanage.html">项目管理</a></li>
+	    				<li class="interfaceManagement"><a href="InterfaceManagement.html">接口管理</a></li>
+	    				<li class="qUsecaseManagement"><a href="UseCaseManagement.html">用例管理</a></li>
+	    				<li class="testOn"><a href="test.html">PostSalted</a></li>
+	    				<li class="aboutUs"><a href="aboutUs.html">关于我们</a></li>
+	    			</ul>
+	    		</div>
+    		</div>
+    		<div class="main"><!--主要内容-->
+                <div class="topmethod">
+                    <img class="urlimg" src="https://tse1-mm.cn.bing.net/th/id/OIP.d6vklhV2Pfz434oUR7wNPQHaHa?pid=Api&rs=1"/>
+    	    		<form>
+                        <select id="skills" name="skills" class="formaction" >
+                            <option value="get">GET</option>
+                            <option value="post">POST</option>
+                            <option value="put">PUT</option>
+                            <option value="patch">PATCH</option>
+                            <option value="delete">DELETE</option>
+                            <option value="head">HEAD</option>
+                            <option value="options">OPTIONS</option>
+                        </select>
+                        <input type="text" name="url" value="http://xxx.com" class="inputurl" />
+                        <input type="submit" value="✔" class="submiturl"/>
+                    </form>
+                </div>
+                <h1 class="requesth1">Request</h1>
+                <div class="request">
+                    <ul>
+                        <li>
+                            <div class="nav_li">Body</div>
+                            <input  class="input_li" type="text" name="bodyrequest"/>
+                        </li>
+                         <li name="li">
+                            <div class="nav_li_header">Header
+                                <div>
+                                    <form name="form">
+                                        <select class="he_form" OnChange="messageReveal()" name="select">
+                                            <option value="0">Content-Type</option>
+                                            <option >application/xml</option>
+                                            <option>application/json</option>
+                                            <option>mulitipart/form-data</option>
+                                            <option>application/x-www-form-urlencoded</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <input  class="input_li" type="text" name="bodyrequest" value="" id="inputli" />
+                        </li>
+                    </ul>
+                    
+                </div>
+                <h1 class="Response">Response</h1>
+                <div class="request">
+                    <ul>
+                        <li>
+                            <div class="nav_li">Body</div>
+                            <input  class="input_li" type="text" name="bodyresponse"/>
+                        </li>
+                         <li>
+                            <div class="nav_li">Header</div>
+                            <input  class="input_li" type="text" name="bodyresponse" value=""/>
+                        </li>
+                    </ul>
+                </div>
+	    	</div>
+    		
+    	</div>
+        <script language="JavaScript">
+            var messages = new Array(); 
+            messages[0] = "";
+            messages[1] = "application/xml"; //这里写入每个选项对应的说明文字
+            messages[2] = "application/json";
+            messages[3] = "mulitipart/form-data";  
+            messages[4] = "application/x-www-form-urlencoded";
+           
+        //根据需要，这里应该随着选项的改变而增减项目
+            function messageReveal() { 
+                var messageindex = document.form.select.selectedIndex;
+                //取得当前下拉菜单选定项目的序号
+                helpmsg = messages[messageindex];
+                //根据序号取得当前选项的说明
+                document.getElementById("inputli").value=helpmsg;
+                // document.li.bodyrequest.value = helpmsg;
+        //将说明写进文框
+            }
+        </script>
+    </body>
+</html>
