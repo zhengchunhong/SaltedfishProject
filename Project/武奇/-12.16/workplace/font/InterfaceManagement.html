@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>接口管理</title>
+        <link rel="stylesheet" href="styleli.css" />
+    </head>
+    <body>
+    	<div class="header"><!--最顶部的框-->
+    		<div class="identification"><!--标识-->
+    			<p>SaltedFishTest</p>
+    		</div>
+    		<div class="loginRegister"><!--登录注册-->
+    			<div class="image"><img  src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1114958240,2690923029&fm=26&gp=0.jpg"/></div>
+				<div class="userName"><text>用户名</text></div>
+				<div class="outline"><button ><a href="homepage.html">退出登录</a></button></div>	
+			</div>
+    	</div>
+    	<div class="mainPage"><!--主页面-->
+    		<div class="leftMain"><!--左边框-->
+    			<div class="tab">
+	    			<ul>
+	    				<li class="homepage"><a href="homepages.html">主页</a></li>
+	    				<li class="projectManagement"><a href="projectmanage.html">项目管理</a></li>
+	    				<li class="interfaceManagementOn"><a href="InterfaceManagement.html">接口管理</a></li>
+	    				<li class="qUsecaseManagement"><a href="UseCaseManagement.html">用例管理</a></li>
+	    				<li class="test"><a href="test.html">PostSalted</a></li>
+	    				<li class="aboutUs"><a href="aboutUs.html">关于我们</a></li>
+	    			</ul>
+	    		</div>
+    		</div>
+    		<div class="main"><!--主要内容-->
+	    		<div class="addproject">
+	    			<!-- <button class="addButton">
+	    				<img cla	ss="addPicture" src="image/add.png"/>
+	    				<p class="addWord">添加项目</p>
+	    			</button> -->
+	    		</div>
+	    		<div class="tableBody">
+	    			<div>
+	    				<form onsubmit="return submitTable()">
+	    					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<input type="text" id="idid"><br>
+							项目名称：<input type="text" id="projectname"><br>
+							项目描述：<input type="text" id="Projectdescription"><br>
+							签名方式：<input type="text" id="Signatureway"><br>
+							<!-- 更新时间：<input type="text" id="Updatetime"><br> -->
+							更新用户：<input type="text" id="Updateuser"><br>
+							<!-- <input name="submit" type="button" id="submit" value="提交" onclick="return submitTable()"> -->
+							<button class="addButton" onclick="return submitTable()">
+	    						<img class="addPicture" src="image/add.png"/>
+	    						<p class="addWord">添加项目</p>
+	    					</button>
+						</form>
+	    			</div>
+	    			<table id="b" border="1" class="tables">
+	    				<tr>
+							<th class="tableth1">ID</th>
+							<th class="tableth2">项目名称</th>
+							<th class="tableth3">项目描述</th>
+							<th class="tableth4">签名方式</th>
+							<th class="tableth5">更新时间</th>
+							<th class="tableth6">更新用户</th>
+							<th class="tableth7">操    作</th>
+						</tr>
+					</table>
+	    		</div>
+	    	</div>
+    	</div>
+    	<script type="text/javascript">
+			function createFormDate(form) {
+		        var date1 = new Date();
+		        var year = date1.getFullYear();
+		        var month = date1.getMonth() + 1;
+		        var day = date1.getDate();
+		        console.log("111");
+		        return year+"/"+month+"/"+day;
+		        
+		    }
+
+			function submitTable(){
+				var idid = document.getElementById("idid").value;
+				var projectname=document.getElementById("projectname").value;
+				var Projectdescription=document.getElementById("Projectdescription").value;
+				var Signatureway=document.getElementById("Signatureway").value;
+				var Updatetime=createFormDate("YYYY/MM/DD");
+				var Updateuser=document.getElementById("Updateuser").value;
+				var operation="√";
+				//创建"行"节点对象
+				var tr = document.createElement("tr");
+				var idd="b";
+				//设置行的内容
+				tr.innerHTML="<tr>"
+					+"<td class='tableth1'>"+idid+"</td>"
+					+"<td class='tableth2'>"+projectname+"</td>"
+					+"<td class='tableth3'>"+Projectdescription+"</td>"
+					+"<td class='tableth4'>"+Signatureway+"</td>"
+					+"<td class='tableth5'>"+Updatetime+"</td>"
+					+"<td class='tableth6'>"+Updateuser+"</td>"
+					+"<td class='tableth7'>"+operation+"</td>"
+					+"</tr>";
+				// 添加数据到表中
+				document.getElementById("b").appendChild(tr);
+				return false;
+			}
+		</script>
+    </body>
+</html>
